@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto Zahlen Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎰 Lotto Zahlen Generator</h1>
+            <p class="subtitle">Generiere deine Glückszahlen</p>
+        </header>
+
+        <main>
+            <div class="lottery-section">
+                <div class="lottery-balls">
+                    <div class="ball" id="ball1"></div>
+                    <div class="ball" id="ball2"></div>
+                    <div class="ball" id="ball3"></div>
+                    <div class="ball" id="ball4"></div>
+                    <div class="ball" id="ball5"></div>
+                    <div class="ball" id="ball6"></div>
+                    <div class="separator">+</div>
+                    <div class="ball bonus" id="bonus"></div>
+                </div>
+                <p class="instructions">6 Zahlen + 1 Zusatzzahl</p>
+            </div>
+
+            <div class="button-group">
+                <button id="generateBtn" class="btn btn-primary">🎲 Zahlen generieren</button>
+                <button id="smartGenerateBtn" class="btn btn-smart">✨ Intelligente Zahlen</button>
+                <button id="resetBtn" class="btn btn-secondary">↻ Zurücksetzen</button>
+            </div>
+
+            <div class="generator-info">
+                <p id="generatorMode" class="mode-info"></p>
+            </div>
+
+            <div class="winning-section">
+                <h2>🏆 Gewinnzahlen überprüfen</h2>
+                <p class="winning-subtitle">Gib die echten Gewinnzahlen ein und überprüfe deine Treffer!</p>
+                
+                <div class="winning-input-group">
+                    <div class="winning-balls">
+                        <input type="number" id="winBall1" class="winning-input" min="1" max="49" placeholder="1-49">
+                        <input type="number" id="winBall2" class="winning-input" min="1" max="49" placeholder="1-49">
+                        <input type="number" id="winBall3" class="winning-input" min="1" max="49" placeholder="1-49">
+                        <input type="number" id="winBall4" class="winning-input" min="1" max="49" placeholder="1-49">
+                        <input type="number" id="winBall5" class="winning-input" min="1" max="49" placeholder="1-49">
+                        <input type="number" id="winBall6" class="winning-input" min="1" max="49" placeholder="1-49">
+                        <div class="winning-separator">+</div>
+                        <input type="number" id="winBonus" class="winning-input bonus" min="0" max="9" placeholder="0-9">
+                    </div>
+                    <button id="checkBtn" class="btn btn-check">✓ Überprüfen</button>
+                </div>
+
+                <div id="resultContainer" class="result-container"></div>
+            </div>
+                <h2>📋 Verlauf (letzte Kombinationen)</h2>
+                <div class="history-list" id="historyList">
+                    <p class="empty-message">Noch keine Kombinationen generiert</p>
+                </div>
+                <button id="clearHistoryBtn" class="btn btn-danger">Verlauf löschen</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Viel Glück! 🍀</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
